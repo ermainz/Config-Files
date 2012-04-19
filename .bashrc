@@ -1,0 +1,10 @@
+alias school='cd ~/Dropbox/School/Spring2012'
+alias ls='ls -alGh'
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+export PS1="[\t]\u@\h "
+#export PS1="[\t]\u@\h:\w$ "
+export SVN_EDITOR=vim
+export JAVA_HOME=`/usr/libexec/java_home`
+export GROOVY_HOME=/Users/erik/groovy-1.8.1
+export PATH=/usr/local/git/bin:/Users/emainz/apache-maven-2.2.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Applications/MacVim-7_3-53:/Users/emainz/jakarta-jmeter-2.4/bin:/Users/emainz/gradle-0.8/bin:$GROOVY_HOME/bin:
+export G3D9DATA=/usr/local/G3D/data
