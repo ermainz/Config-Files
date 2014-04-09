@@ -1,7 +1,13 @@
 # /usr/local/bin:/Applications/MacVim/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
-PATH=/usr/local/bin:/Applications/MacVim/:$PATH
+RUBYGEMS=/usr/local/Cellar/ruby193/1.9.3-p448/bin
+PATH=/Applications/Racket\ v5.3.6/bin:/usr/local/bin:/Applications/MacVim/:$RUBYGEMS:$PATH
+
+#Android
+PATH=~/adt-bundle-mac-x86_64-20131030/sdk/tools:~/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH
 
 alias ls='ls -alGh'
+alias validate='~/crashplan_core/core-tools/bin/validate_plan.rb'
+alias infcups='while true; do ruby ~/crashplan_core/core-tools/bin/cups.rb; sleep 5; done'
 
 #load git branch prompt script
 source ~/.git-prompt.sh
@@ -14,3 +20,8 @@ source ~/.git-prompt.sh
 export PS1="[\A]\u@\h:\e[0;34m\W\e[m:\e[1;34m\$(__git_ps1)\e[m \e[1;31m>\e[m "
 #full directory name
 #export PS1="[\A]\u@\h:\w > "
+
+export ANT_OPTS=-Xmx2g
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
