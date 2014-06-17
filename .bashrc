@@ -1,10 +1,31 @@
-alias school='cd ~/Dropbox/School/Spring2012'
+# /usr/local/bin:/Applications/MacVim/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
+RUBYGEMS=/usr/local/Cellar/ruby193/1.9.3-p448/bin
+PATH=/Applications/Racket\ v5.3.6/bin:/usr/local/bin:/Applications/MacVim:$RUBYGEMS:$PATH
+
+#Android
+PATH=~/adt-bundle-mac-x86_64-20131030/sdk/tools:~/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH
+
 alias ls='ls -alGh'
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-export PS1="[\t]\u@\h "
-#export PS1="[\t]\u@\h:\w$ "
-export SVN_EDITOR=vim
-export JAVA_HOME=`/usr/libexec/java_home`
-export GROOVY_HOME=/Users/erik/groovy-1.8.1
-export PATH=/usr/local/git/bin:/Users/emainz/apache-maven-2.2.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Applications/MacVim-7_3-53:/Users/emainz/jakarta-jmeter-2.4/bin:/Users/emainz/gradle-0.8/bin:$GROOVY_HOME/bin:
-export G3D9DATA=/usr/local/G3D/data
+alias validate='~/crashplan_core/core-tools/bin/validate_plan.rb'
+alias infcups='while true; do ruby ~/crashplan_core/core-tools/bin/cups.rb; sleep 5; done'
+
+alias createdb='/Users/erik.mainz/code42/core/pro_core/conf/bin/createDB.py -a'
+alias startandroid='emulator -avd Nexus4 -wipe-data -scale .5 &'
+alias buildweb='cd ~/code42/core/web && grunt && cd -'
+
+#load git branch prompt script
+source ~/.git-prompt.sh
+
+#export PS1="[\t]\u@\h "
+#directory basename
+#\e[0;34m - blue
+#\e[1;34m - dark blue
+#\e[1;31m - dark red
+export PS1="[\A]\u@\h:\e[0;34m\w\e[m:\e[1;34m\$(__git_ps1)\e[m \n \e[1;31m>\e[m "
+#full directory name
+#export PS1="[\A]\u@\h:\w > "
+
+export ANT_OPTS=-Xmx2g
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
