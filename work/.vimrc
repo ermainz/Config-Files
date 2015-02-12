@@ -1,4 +1,4 @@
-set nocompatible
+ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
@@ -13,7 +13,13 @@ Plugin 'gmarik/vundle'
 
 " Keep Plugin commands between here and filetype plugin indent on.
 Plugin 'scrooloose/nerdtree'
+" Plugin 'vim-scripts/ScrollColors'
 
+Plugin 'plasticboy/vim-markdown'
+
+Plugin 'majutsushi/tagbar'
+
+Plugin 'kien/ctrlp.vim'
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
@@ -44,9 +50,12 @@ set shiftwidth=2
 set expandtab
 set wildmenu
 
+nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>t :TagbarToggle<CR>
+
 "" for horizontal scroll
-" set go+=b
-" set nowrap
+"" set go+=b
+"" set nowrap
 
 """"""""""""""""""""""""""""""
 " airline
