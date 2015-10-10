@@ -2,8 +2,8 @@
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
 "call vundle#rc(path)
@@ -14,11 +14,18 @@ Plugin 'gmarik/vundle'
 " Keep Plugin commands between here and filetype plugin indent on.
 Plugin 'scrooloose/nerdtree'
 " Plugin 'vim-scripts/ScrollColors'
-
 Plugin 'plasticboy/vim-markdown'
-
 Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-cucumber'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-bufferline'
 
+call vundle#end()
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -47,13 +54,14 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set wildmenu
+" colorscheme navajo-night
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
 
 "" for horizontal scroll
-" set go+=b
-" set nowrap
+"" set go+=b
+"" set nowrap
 
 """"""""""""""""""""""""""""""
 " airline
@@ -84,5 +92,8 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#bufferline#enabled = 1
+
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 set laststatus=2
