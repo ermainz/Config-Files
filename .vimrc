@@ -24,6 +24,13 @@ Plugin 'tpope/vim-cucumber'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-bufferline'
+Plugin 'pangloss/vim-javascript'
+" Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'unblevable/quick-scope'
+Plugin 'tpope/vim-ragtag'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -44,6 +51,7 @@ filetype plugin indent on     " required
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
+
 set autoindent
 set number
 set hls
@@ -55,6 +63,27 @@ set shiftwidth=2
 set expandtab
 set wildmenu
 " colorscheme navajo-night
+set t_Co=256
+set noesckeys
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+" solarized options
+if has("gui_running")
+    let g:solarized_termtrans=1
+    let g:solarized_termcolors=256
+else
+    let g:solarized_termtrans=1
+    let g:solarized_termcolors=16
+endif
+set background=dark
+colorscheme solarized
+
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
