@@ -15,11 +15,6 @@ alias gsis='git status --ignore-submodules'
 alias cleanclasspath='git checkout -- "*.classpath"'
 alias findswp='find . -iname "*.swp"'
 
-alias edge='cd ~/code42/edge_case/test_automation/'
-alias console='cd ~/code42/console'
-alias sectools='cd ~/code42/sectools'
-alias core='cd ~/code42/core'
-
 alias songzor='cd personal/Songzor/Songzor/'
 
 #load git branch prompt script
