@@ -11,6 +11,16 @@ alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 alias gs='git status'
+alias gsis='git status --ignore-submodules'
+alias cleanclasspath='git checkout -- "*.classpath"'
+alias findswp='find . -iname "*.swp"'
+
+alias edge='cd ~/code42/edge_case/test_automation/'
+alias console='cd ~/code42/console'
+alias sectools='cd ~/code42/sectools'
+alias core='cd ~/code42/core'
+
+alias songzor='cd personal/Songzor/Songzor/'
 
 #load git branch prompt script
 source ~/.git-prompt.sh
@@ -29,11 +39,16 @@ export ANT_OPTS=-Xmx2g
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+export PATH="/Applications/apache-maven-3.3.3/bin:$PATH"
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PGHOST=localhost
 
 export EDITOR=vim
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
+#export M2_HOME=/Applications/apache-maven-3.3.3/bin
 
 source ~/.workrc
 

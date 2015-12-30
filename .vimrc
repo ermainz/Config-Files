@@ -9,7 +9,7 @@ call vundle#begin()
 "call vundle#rc(path)
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between here and filetype plugin indent on.
 Plugin 'scrooloose/nerdtree'
@@ -27,10 +27,13 @@ Plugin 'bling/vim-bufferline'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'unblevable/quick-scope'
 Plugin 'tpope/vim-ragtag'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'Raimondi/delimitMate'
+Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-rails'
+Plugin 'sjl/gundo.vim'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -52,6 +55,7 @@ call pathogen#infect()
 call pathogen#helptags()
 syntax on
 
+set cursorline
 set autoindent
 set number
 set hls
@@ -65,6 +69,9 @@ set wildmenu
 " colorscheme navajo-night
 set t_Co=256
 set noesckeys
+
+set lcs=tab:▶\ ,trail:-,eol:$ 
+set list!
 
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 if executable('ag')
@@ -82,11 +89,20 @@ endif
 set background=dark
 colorscheme solarized
 
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+" allows cursor change in tmux mode
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
+
+" toggle gundo
+nnoremap <leader>u :GundoToggle<CR>
 
 "" for horizontal scroll
 "" set go+=b
@@ -124,5 +140,6 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#bufferline#enabled = 1
 
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_javascript_checkers = ['eslint']
 
 set laststatus=2
