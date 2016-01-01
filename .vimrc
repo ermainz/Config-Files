@@ -51,8 +51,8 @@ filetype plugin indent on     " required
 " Put your stuff after this line
 
 " call pathogen#runtime_append_all_bundles()
-call pathogen#infect()
-call pathogen#helptags()
+" call pathogen#infect()
+" call pathogen#helptags()
 syntax on
 
 set cursorline
