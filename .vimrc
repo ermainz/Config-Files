@@ -34,6 +34,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'sjl/gundo.vim'
+Plugin 'rking/ag.vim'
+Plugin 'Chun-Yang/vim-action-ag'
 
 call vundle#end()
 filetype plugin indent on     " required
