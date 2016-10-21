@@ -36,6 +36,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'sjl/gundo.vim'
 Plugin 'rking/ag.vim'
 Plugin 'Chun-Yang/vim-action-ag'
+Plugin 'derekwyatt/vim-scala' " Scala syntax highlighting and some other goodies
 
 call vundle#end()
 filetype plugin indent on     " required
