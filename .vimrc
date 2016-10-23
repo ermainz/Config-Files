@@ -37,6 +37,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'rking/ag.vim'
 Plugin 'Chun-Yang/vim-action-ag'
 Plugin 'derekwyatt/vim-scala' " Scala syntax highlighting and some other goodies
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -59,6 +60,7 @@ filetype plugin indent on     " required
 syntax on
 
 set cursorline
+set cursorcolumn
 set autoindent
 set number
 set hls
