@@ -7,6 +7,8 @@ PATH=~/adt-bundle-mac-x86_64-20131030/sdk/tools:~/adt-bundle-mac-x86_64-20131030
 
 PATH=~/bin:$PATH
 
+PATH=~/Library/Android/sdk/tools::$PATH
+
 alias ls='ls -alGh'
 
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
