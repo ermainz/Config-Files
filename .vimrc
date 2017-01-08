@@ -107,6 +107,12 @@ nnoremap <Leader>t :TagbarToggle<CR>
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 
+" keyboard shortcuts for :Ag
+" search for word under cursor in normal mode
+nnoremap <leader>a :Ag<CR>
+" search for selected text in visual mode
+vnoremap <leader>a y :Ag <C-R>"<CR>
+
 "" for horizontal scroll
 "" set go+=b
 "" set nowrap
