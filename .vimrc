@@ -1,64 +1,45 @@
- set nocompatible
+set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"let path = '~/some/path/here'
-"call vundle#rc(path)
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" Keep Plugin commands between here and filetype plugin indent on.
-Plugin 'scrooloose/nerdtree'
-" Plugin 'vim-scripts/ScrollColors'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'majutsushi/tagbar'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-cucumber'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-bufferline'
-Plugin 'pangloss/vim-javascript'
-" Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-ragtag'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'Raimondi/delimitMate'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-rails'
-Plugin 'sjl/gundo.vim'
-Plugin 'rking/ag.vim'
-Plugin 'Chun-Yang/vim-action-ag'
-Plugin 'derekwyatt/vim-scala' " Scala syntax highlighting and some other goodies
-Plugin 'leafgarland/typescript-vim'
-Plugin 'kovisoft/slimv'
-
-
-call vundle#end()
-filetype plugin indent on     " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+" Plugins
 "
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Plugin commands are not allowed.
-" Put your stuff after this line
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.vim/plugged')
 
-" call pathogen#runtime_append_all_bundles()
-" call pathogen#infect()
-" call pathogen#helptags()
+Plug 'scrooloose/nerdtree'
+" Plug 'vim-scripts/ScrollColors'
+Plug 'plasticboy/vim-markdown'
+Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-endwise'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-cucumber'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-bufferline'
+Plug 'pangloss/vim-javascript'
+" Plug 'nathanaelkane/vim-indent-guides'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-ragtag'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-commentary'
+Plug 'Raimondi/delimitMate'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-rails'
+Plug 'sjl/gundo.vim'
+Plug 'rking/ag.vim'
+Plug 'Chun-Yang/vim-action-ag'
+" Scala syntax highlighting and some other goodies
+Plug 'derekwyatt/vim-scala'
+Plug 'leafgarland/typescript-vim'
+Plug 'kovisoft/slimv'
+
+" Initialize plugin system
+call plug#end()
+
+" End Plugins
+
 syntax on
 
 set cursorline
