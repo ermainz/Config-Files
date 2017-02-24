@@ -1,0 +1,13 @@
+#! /bin/bash
+
+printf '\e[33;4mRemotes\e[0m\n'
+git remote -vvv
+printf '\n'
+printf '\e[33;4mStash\e[0m\n'
+git stash list
+printf '\n'
+printf '\e[33;4mBranches\e[0m\n'
+git branch -vvv
+printf '\n'
+printf '\e[33;4mStatus\e[0m\n'
+git status
