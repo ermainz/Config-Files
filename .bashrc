@@ -9,6 +9,8 @@ PATH=~/bin:$PATH
 
 PATH=~/Library/Android/sdk/tools::$PATH
 
+export WORK_DIR=~/code
+
 alias ls='ls -alGh'
 
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
