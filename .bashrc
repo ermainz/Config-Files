@@ -18,6 +18,7 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 alias gs='git status'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias ga='git add'
 alias gsis='git status --ignore-submodules'
 alias gi='git-info'
@@ -53,7 +54,7 @@ export EDITOR=vim
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 export JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8"
-export MAVEN_OPTS="-Xmx2048M -Xms2048M -XX:PermSize=512M -XX:MaxPermSize=512M -Djava.awt.headless=true"
+export MAVEN_OPTS="-Xmx2g -Xms1g -XX:PermSize=512M -XX:MaxPermSize=512M -Djava.awt.headless=true"
 
 if [ -s ~/.workrc ] 
 then
