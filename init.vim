@@ -161,3 +161,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_javascript_checkers = ['eslint']
 
 set laststatus=2
+
+" global mappings for ragtag
+" :help ragtag
+let g:ragtag_global_maps = 1
