@@ -131,6 +131,16 @@ nnoremap <leader>a :Ag<CR>
 " search for selected text in visual mode
 vnoremap <leader>a y :Ag <C-R>"<CR>
 
+" pipe current buffer contents through jq to format json
+nnoremap <leader>J :%!jq . <CR>
+
+" use // to search for visually selected text, ignoring magic characters,
+" escaping back-slash characters
+" Simpler version to show what this does without ignoring magic chars and
+" excaping
+" vnoremap // y/<C-R>"<CR>
+vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
+
 "" for horizontal scroll
 "" set go+=b
 "" set nowrap
