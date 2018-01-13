@@ -5,3 +5,4 @@ cp ~/.bashrc .
 cp ~/.gvimrc .
 cp ~/.tmux.conf .
 cp ~/.vimrc .
+cp ~/.config/nvim/init.vim .
