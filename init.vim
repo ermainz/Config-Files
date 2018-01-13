@@ -1,3 +1,12 @@
+""""""
+""" Notes
+""""""
+" leader - b " open buffergator
+" leader - a " search selected text with ag
+""""""
+""" End Notes
+""""""
+
 set nocompatible
 filetype off
 
