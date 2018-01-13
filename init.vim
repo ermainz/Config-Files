@@ -35,7 +35,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'kovisoft/slimv'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
-Plug 'carlitux/deoplete-ternjs'
+" Plug 'carlitux/deoplete-ternjs'
+Plug 'jeetsukumaran/vim-buffergator'
 
 " Initialize plugin system
 call plug#end()
@@ -44,36 +45,40 @@ call plug#end()
 
 syntax on
 
+"""
 " Deoplete configuration
 " https://www.gregjs.com/vim/2016/neovim-deoplete-jspc-ultisnips-and-tern-a-config-for-kickass-autocompletion/
+"""
 
 " deoplete config
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#omni#functions = {}
-let g:deoplete#omni#functions.javascript = [
-  \ 'tern#Complete'
-\]
+" let g:deoplete#omni#functions.javascript = [
+"   \ 'tern#Complete'
+" \]
 
-" deoplete-ternjs config
-let g:tern_request_timeout = 1
-let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
+" " deoplete-ternjs config
+" let g:tern_request_timeout = 1
+" let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
 
-"Add extra filetypes
-let g:tern#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ 'vue',
-                \ '...'
-                \ ]
+" "Add extra filetypes
+" let g:tern#filetypes = [
+"                 \ 'jsx',
+"                 \ 'javascript.jsx',
+"                 \ 'vue',
+"                 \ '...'
+"                 \ ]
 
-set completeopt=longest,menuone,preview
-let g:deoplete#sources = {}
-let g:deoplete#sources['javascript.jsx'] = ['file', 'buffer', 'ternjs']
+" set completeopt=longest,menuone,preview
+" let g:deoplete#sources = {}
+" let g:deoplete#sources['javascript.jsx'] = ['file', 'buffer', 'ternjs']
 
-" Disable preview window
-set completeopt-=preview
-"
+" " Disable preview window
+" set completeopt-=preview
+
+"""
 " End Deoplete configuration
+"""
 
 set cursorline
 set cursorcolumn
