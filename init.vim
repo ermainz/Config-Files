@@ -111,7 +111,7 @@ set background=dark
 colorscheme solarized
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>t :TagbarToggle<CR>
+nnoremap <Leader>o :TagbarToggle<CR>
 
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
