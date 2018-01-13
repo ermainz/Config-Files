@@ -11,6 +11,29 @@ PATH=~/Library/Android/sdk/tools::$PATH
 
 export WORK_DIR=~/code
 
+git-info() {
+  printf '\e[33;4mRemotes\e[0m\n'
+  git remote -vvv
+  printf '\n'
+  printf '\e[33;4mStash\e[0m\n'
+  git stash list
+  printf '\n'
+  printf '\e[33;4mBranches\e[0m\n'
+  git branch -vvv
+  printf '\n'
+  printf '\e[33;4mStatus\e[0m\n'
+  git status
+}
+
+function gco {
+  git branch | sed -n "$1p" | xargs git checkout
+}
+
+function goget {
+  echo "git fetch $1 && git rebase $1/$2"
+  git fetch $1 && git rebase $1/$2
+}
+
 alias ls='ls -alGh'
 
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -20,6 +43,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias ga='git add'
+alias gc='git checkout'
 alias gsis='git status --ignore-submodules'
 alias gi='git-info'
 alias cleanclasspath='git checkout -- "*.classpath"'
