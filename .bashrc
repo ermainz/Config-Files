@@ -7,9 +7,14 @@ PATH=~/adt-bundle-mac-x86_64-20131030/sdk/tools:~/adt-bundle-mac-x86_64-20131030
 
 PATH=~/bin:$PATH
 
-PATH=~/Library/Android/sdk/tools::$PATH
+PATH=~/Library/Android/sdk/tools:$PATH
 
 export WORK_DIR=~/code
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export neovimPath=/usr/local/bin/nvim
 
 git-info() {
   printf '\e[33;4mRemotes\e[0m\n'
@@ -48,6 +53,8 @@ alias gsis='git status --ignore-submodules'
 alias gi='git-info'
 alias cleanclasspath='git checkout -- "*.classpath"'
 alias findswp='find . -iname "*.swp"'
+
+alias tpbcopy='reattach-to-user-namespace pbcopy'
 
 alias songzor='cd personal/Songzor/Songzor/'
 
