@@ -43,7 +43,7 @@ Plug 'Chun-Yang/vim-action-ag'
 Plug 'derekwyatt/vim-scala'
 Plug 'leafgarland/typescript-vim'
 Plug 'kovisoft/slimv'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 " Plug 'carlitux/deoplete-ternjs'
 Plug 'jeetsukumaran/vim-buffergator'
