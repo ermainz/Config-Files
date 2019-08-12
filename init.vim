@@ -29,6 +29,7 @@ Plug 'bling/vim-bufferline'
 Plug 'pangloss/vim-javascript'
 " Plug 'nathanaelkane/vim-indent-guides'
 Plug 'altercation/vim-colors-solarized'
+Plug 'icymind/NeoSolarized'
 Plug 'tpope/vim-ragtag'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
@@ -103,7 +104,6 @@ set expandtab
 set wildmenu
 " colorscheme navajo-night
 set t_Co=256
-set noesckeys
 
 set lcs=tab:▶\ ,trail:-,eol:$ 
 set list!
@@ -114,15 +114,16 @@ if executable('ag')
 endif
 
 " solarized options
-if has("gui_running")
-    let g:solarized_termtrans=1
-    let g:solarized_termcolors=256
+if has("gui_vimr")
+    set termguicolors
+    set background=light
+    colorscheme NeoSolarized
 else
+    set background=dark
+    colorscheme solarized
     let g:solarized_termtrans=1
     let g:solarized_termcolors=16
 endif
-set background=dark
-colorscheme solarized
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>o :TagbarToggle<CR>
