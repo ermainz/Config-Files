@@ -2,6 +2,8 @@
 
 cp ~/.bash_profile .
 cp ~/.bashrc .
+cp ~/.zprofile .
+cp ~/.zshrc .
 cp ~/.gvimrc .
 cp ~/.tmux.conf .
 cp ~/.vimrc .
