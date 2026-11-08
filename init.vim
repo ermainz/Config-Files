@@ -7,9 +7,6 @@
 """ End Notes
 """"""
 
-set nocompatible
-filetype off
-
 " Plugins
 "
 " Specify a directory for plugins (for vim: ~/.vim/plugged)
