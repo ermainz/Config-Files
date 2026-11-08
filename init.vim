@@ -113,17 +113,19 @@ if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+"" comented out 20250310
 " solarized options
-if has("gui_vimr")
-    set termguicolors
-    set background=light
-    colorscheme NeoSolarized
-else
-    set background=dark
-    colorscheme solarized
-    let g:solarized_termtrans=1
-    let g:solarized_termcolors=16
-endif
+" if has("gui_vimr")
+"     set termguicolors
+"     set background=light
+"     colorscheme NeoSolarized
+" else
+"     set background=dark
+"     colorscheme solarized
+"     let g:solarized_termtrans=1
+"     let g:solarized_termcolors=16
+" endif
+colorscheme NeoSolarized
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>o :TagbarToggle<CR>
